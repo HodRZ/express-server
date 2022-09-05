@@ -5,10 +5,8 @@ const server = require("./../modules/general/server.js");
 const request = supertest(server.app)
 // require("./../index.js")
 
-const { handlePostUser } = require("./../modules/person/handlePostPerson.js")
-
-describe("Post Person Route", () => {
-    test('Route is working', async () => {
+describe("/Person, post", () => {
+    test('post request to route delivers data, route handler changes data', async () => {
         const data = {
             "name": "Hod",
             "age": 5,
